@@ -15,11 +15,11 @@ export default function Home() {
       time:'10.00 am -11.00 am'
     },
     {
-      name:'Create a social media APP',
+      name:'Go to work',
       time:'8.00 pm - 9.00 pm'
     },
     {
-      name:'Create a social media APP',
+      name:'Have a marriage function',
       time:'8.00 pm - 9.00 pm'
     }
   ]
