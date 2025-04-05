@@ -11,8 +11,8 @@ export default function Home() {
       time:'8.00 pm - 9.00 pm'
     },
     {
-      name:'Create a social media APP',
-      time:'8.00 pm - 9.00 pm'
+      name:'Do jogging',
+      time:'10.00 am -11.00 am'
     },
     {
       name:'Create a social media APP',
