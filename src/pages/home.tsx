@@ -61,14 +61,14 @@ export default function Home() {
             }
           </div>
         </section>
-        <div className="absolute bottom-5 bg-black rounded-full px-4 py-3 flex justify-between items-center w-[30%] left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-5 bg-black rounded-full px-4 py-3 flex justify-between items-center w-[30%] left-1/2 transform -translate-x-1/2 hover:scale-105 transition hover:cursor-pointer">
           <div className="text-white flex gap-2 items-center">
-            <p>+</p>
+            <p className="text-2xl" >+</p>
             <p>Create new Task</p>
           </div>
           <div className="text-white flex gap-2 items-center">
-            <p>M</p>
-            <p>N</p>
+            <p className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center" >M</p>
+            <p className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center" >N</p>
           </div>
         </div>
       </div>
