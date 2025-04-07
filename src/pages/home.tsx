@@ -1,3 +1,4 @@
+import SideBar from "../components/sideBar"
 
 
 
@@ -28,8 +29,8 @@ export default function Home() {
   return (
     <div className="h-screen" >
       <div className="p-4 flex bg-gray-100 gap-5 h-full relative">
-        <section className="w-[30%] bg-white" >
-
+        <section className="w-[30%] " >
+          <SideBar/>
         </section>
         <section className="flex flex-col w-[70%] px-10 py-8 gap-8">
           <div className="flex justify-between" >
