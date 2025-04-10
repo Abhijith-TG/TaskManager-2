@@ -49,6 +49,18 @@ export default function SideBar() {
       </div>
       <div className="mt-5" >
         <p className="text-3xl font-semibold" >Groups</p>
+
+      </div>
+      <div className="grid-cols-2" >
+        <div>
+          <div className="">
+
+          </div>
+          <div>
+
+          </div>
+        </div>
+
       </div>
       <div className=" mt-5 bg-gray-200 rounded-full px-4 py-2 flex justify-between items-center  hover:scale-105 transition hover:cursor-pointer">
         <div className="t flex gap-2 items-center">
