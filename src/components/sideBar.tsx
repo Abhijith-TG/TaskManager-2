@@ -47,17 +47,29 @@ export default function SideBar() {
           <p className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center" >N</p>
         </div>
       </div>
-      <div className="mt-5" >
+      <div className="my-5 " >
         <p className="text-3xl font-semibold" >Groups</p>
 
       </div>
       <div className="grid-cols-2" >
-        <div>
+        <div className="grid grid-cols-3 " >
           <div className="">
+            <div className="w-30 rounded bg-red-200 h-30">
 
+            </div>
+            <div>
+            <h1 className=" font-semibold text-lg">Project desc</h1>
+              <p className="text-gray-500">5 people</p>
+            </div>
           </div>
-          <div>
+          <div className="">
+            <div className="w-30 rounded bg-blue-200 h-30">
 
+            </div>
+            <div>
+              <h1 className="font-semibold text-lg">Test</h1>
+              <p className="text-gray-500">4 people</p>
+            </div>
           </div>
         </div>
 
