@@ -1,9 +1,14 @@
+import { useState } from "react";
 import SideBar from "../components/sideBar"
+import { IoMdClose } from "react-icons/io";
+import { FiPlus } from "react-icons/fi";
 
 
 
 
 export default function Home() {
+
+  const [showPopUp, setShowPopUp] = useState(false);
 
 
   const task = [
@@ -63,8 +68,10 @@ export default function Home() {
           </div>
         </section>
         <div className="absolute bottom-5 bg-black rounded-full px-4 py-3 flex justify-between items-center w-[30%] left-1/2 transform -translate-x-1/2 hover:scale-105 transition hover:cursor-pointer">
-          <div className="text-white flex gap-2 items-center">
-            <p className="text-2xl" >+</p>
+          <div onClick={() => setShowPopUp(!showPopUp)} className="text-white flex gap-2 items-center ">
+            <p className={`text-2xl transition-transform duration-300 ${showPopUp ? 'rotate-135' : 'rotate-0'}`} > 
+              { <FiPlus />} 
+            </p>
             <p>Create new Task</p>
           </div>
           <div className="text-white flex gap-2 items-center">
