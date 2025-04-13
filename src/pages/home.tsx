@@ -1,6 +1,5 @@
 import { useState } from "react";
 import SideBar from "../components/sideBar"
-import { IoMdClose } from "react-icons/io";
 import { FiPlus } from "react-icons/fi";
 
 
