@@ -1,5 +1,11 @@
+import { FiPlus } from "react-icons/fi";
+import { useState } from "react";
+
+
 
 export default function SideBar() {
+  const [showPopUp, setShowPopUp] = useState(false);
+
   return (
     <div className=" p-8 rounded-lg bg-white h-full" >
       <div>
@@ -38,8 +44,10 @@ export default function SideBar() {
         </div>
       </div>
       <div className=" mt-5 bg-gray-200 rounded-full px-4 py-2 flex justify-between items-center  hover:scale-105 transition hover:cursor-pointer">
-        <div className="t flex gap-2 items-center">
-          <p className="text-2xl" >+</p>
+        <div className="t flex gap-2 items-center" onClick={() => setShowPopUp(!showPopUp)} >
+          <p className={`text-2xl transition-transform duration-300 ${showPopUp ? 'rotate-135' : 'rotate-0'}`} >
+            {<FiPlus />}
+          </p>
           <p>Create new List</p>
         </div>
         <div className="text-white flex gap-2 items-center">
@@ -47,24 +55,38 @@ export default function SideBar() {
           <p className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center" >N</p>
         </div>
       </div>
-      <div className="mt-5" >
+      <div className="my-5 " >
         <p className="text-3xl font-semibold" >Groups</p>
 
       </div>
       <div className="grid-cols-2" >
-        <div>
+        <div className="grid grid-cols-3 " >
           <div className="">
+            <div className="w-30 rounded bg-red-200 h-30">
 
+            </div>
+            <div>
+              <h1 className=" font-semibold text-lg">Project desc</h1>
+              <p className="text-gray-500">5 people</p>
+            </div>
           </div>
-          <div>
+          <div className="">
+            <div className="w-30 rounded bg-blue-200 h-30">
 
+            </div>
+            <div>
+              <h1 className="font-semibold text-lg">Test</h1>
+              <p className="text-gray-500">4 people</p>
+            </div>
           </div>
         </div>
 
       </div>
       <div className=" mt-5 bg-gray-200 rounded-full px-4 py-2 flex justify-between items-center  hover:scale-105 transition hover:cursor-pointer">
-        <div className="t flex gap-2 items-center">
-          <p className="text-2xl" >+</p>
+        <div className="t flex gap-2 items-center" onClick={() => setShowPopUp(!showPopUp)} >
+          <p className={`text-2xl transition-transform duration-300 ${showPopUp ? 'rotate-135' : 'rotate-0'}`} >
+            {<FiPlus />}
+          </p>
           <p>Create new Group</p>
         </div>
         <div className="text-white flex gap-2 items-center">
