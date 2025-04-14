@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SideBar from "../components/sideBar"
 import { FiPlus } from "react-icons/fi";
+import AddTaskPopUp from "../components/AddTaskPopUp";
 
 
 
@@ -31,10 +32,10 @@ export default function Home() {
 
 
   return (
-    <div className="h-screen" >
+    <div className="h-screen " >
       <div className="p-4 flex bg-gray-100 gap-5 h-full relative">
         <section className="w-[30%] " >
-          <SideBar/>
+          <SideBar />
         </section>
         <section className="flex flex-col w-[70%] px-10 py-8 gap-8">
           <div className="flex justify-between" >
@@ -66,10 +67,10 @@ export default function Home() {
             }
           </div>
         </section>
-        <div className="absolute bottom-5 bg-black rounded-full px-4 py-3 flex justify-between items-center w-[30%] left-1/2 transform -translate-x-1/2 hover:scale-105 transition hover:cursor-pointer">
-          <div onClick={() => setShowPopUp(!showPopUp)} className="text-white flex gap-2 items-center ">
-            <p className={`text-2xl transition-transform duration-300 ${showPopUp ? 'rotate-135' : 'rotate-0'}`} > 
-              { <FiPlus />} 
+        <div onClick={() => setShowPopUp(!showPopUp)} className="absolute bottom-5 bg-black rounded-full px-4 py-3 flex justify-between items-center w-[30%] left-1/2 transform -translate-x-1/2 hover:scale-105 transition hover:cursor-pointer">
+          <div className="text-white flex gap-2 items-center ">
+            <p className={`text-2xl transition-transform duration-300 ${showPopUp ? 'rotate-135' : 'rotate-0'}`} >
+              {<FiPlus />}
             </p>
             <p>Create new Task</p>
           </div>
@@ -78,7 +79,13 @@ export default function Home() {
             <p className="w-8 h-8 bg-gray-800 rounded-full flex justify-center items-center" >N</p>
           </div>
         </div>
+        {showPopUp &&
+          <div className="absolute transform -translate-1/2  top-1/2 left-1/2">
+            <AddTaskPopUp />
+          </div>
+        }
       </div>
+
     </div>
   )
 }
