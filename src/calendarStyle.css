@@ -1,0 +1,58 @@
+/* Remove grid/table borders */
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: none !important;
+}
+
+/* Make each day cell background soft and uniform */
+.fc-daygrid-day {
+  background-color: transparent;
+}
+
+/* Style the clickable date number */
+.fc-daygrid-day-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+  border-radius: 9999px;
+  font-weight: 500;
+  color: #1f2937; /* Tailwind gray-800 */
+  transition: background 0.2s ease;
+}
+
+/* Center all content in day cells */
+.fc-daygrid-day-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Today’s date styling - Even more specific and forceful */
+td.fc-day-today .fc-daygrid-day-content .fc-daygrid-day-number {
+  border: 2px solid #60a5fa !important; /* Tailwind blue-400 */
+  color: #2563eb !important; /* Tailwind blue-600 */
+  background-color: transparent !important; /* Forcefully remove background */
+}
+
+
+/* Hover effect */
+.fc-daygrid-day:hover .fc-daygrid-day-number {
+  background-color: #e0f2fe; /* Tailwind blue-100 */
+  cursor: pointer;
+}
+
+/* Weekend background */
+.fc-day-sat .fc-daygrid-day-number,
+.fc-day-sun .fc-daygrid-day-number {
+  background-color: #fef2f2; /* Tailwind red-100 */
+}
+
+/* Optional: selected day (you can add this via JS) */
+.fc-day-selected .fc-daygrid-day-number {
+  background-color: #4f46e5; /* Indigo */
+  color: white;
+}
